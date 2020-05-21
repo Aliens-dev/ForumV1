@@ -11,6 +11,11 @@
 |
 */
 
+
+Route::get('pop',function(){
+    event(new \App\Events\OrderMade('helo world'));
+});
+
 Route::get('/', 'HomeController@index')->name('home.index');
 Route::get('/login', 'HomeController@login')->name('user.login.get');
 Route::post('/login','HomeController@loginPost')->name('user.login.post');

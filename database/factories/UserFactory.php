@@ -40,7 +40,7 @@ $factory->define(\App\Thread::class, function (Faker $faker) {
         'title' => $faker->text(20),
         'content' => $faker->text(500),
         'user_id' => random_int(1,10),
-        'forum_id' => random_int(32,41),
+        'forum_id' => random_int(1,10),
     ];
 });
 

@@ -11135,7 +11135,7 @@ a.text-dark:focus {
 .forums .list .item .forum-name .title {
   padding: 10px;
   margin: 5px 10px;
-  font-size: 22px;
+  font-size: 17px;
   font-weight: 600;
 }
 
@@ -11151,7 +11151,7 @@ a.text-dark:focus {
 .forums .list .item .forum-name .description {
   padding: 10px;
   margin: 5px 10px;
-  font-size: 17px;
+  font-size: 13px;
 }
 
 .forums .list .item .forum-info {
@@ -11162,7 +11162,7 @@ a.text-dark:focus {
   -webkit-box-align: center;
           align-items: center;
   grid-auto-rows: 50%;
-  font-size: 17px;
+  font-size: 14px;
 }
 
 .forums .list .item .latest-thread {
@@ -11188,7 +11188,7 @@ a.text-dark:focus {
   -webkit-box-align: center;
           align-items: center;
   grid-auto-rows: 50%;
-  font-size: 17px;
+  font-size: 14px;
 }
 
 .deletebtn {
@@ -11227,7 +11227,7 @@ a.text-dark:focus {
 
 .threads .list .item .thread-name .title {
   padding: 0 10px;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 600;
 }
 
@@ -11248,7 +11248,7 @@ a.text-dark:focus {
   -webkit-box-align: center;
           align-items: center;
   grid-auto-rows: 50%;
-  font-size: 17px;
+  font-size: 14px;
 }
 
 .threads .list .item .latest-reply {
@@ -11274,7 +11274,7 @@ a.text-dark:focus {
   -webkit-box-align: center;
           align-items: center;
   grid-auto-rows: 50%;
-  font-size: 17px;
+  font-size: 14px;
 }
 
 .user-thread {
@@ -11298,10 +11298,11 @@ a.text-dark:focus {
 
 .user-thread .thread .thread-post {
   display: grid;
-  margin: 5px 0;
+  margin: 10px 0;
   grid-column-gap: 5px;
   grid-template-columns: 1fr 4fr;
   grid-template-areas: "profile content";
+  min-height: 400px;
 }
 
 .user-thread .thread .thread-post .profile {
@@ -11310,20 +11311,25 @@ a.text-dark:focus {
   border: 1px solid #EEE;
   border-radius: 3px;
   padding: 5px 10px;
-  display: grid;
+  display: -webkit-box;
+  display: flex;
   -webkit-box-pack: center;
           justify-content: center;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 20px 20px;
-  grid-row-gap: 10px;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
 }
 
 .user-thread .thread .thread-post .profile .profile-username {
   color: #34AbEF;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .user-thread .thread .thread-post .profile .profile-img {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   padding: 10px;
 }
@@ -11349,16 +11355,18 @@ a.text-dark:focus {
   border-radius: 3px;
   padding: 5px 10px;
   position: relative;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .user-thread .thread .thread-reply {
   display: grid;
-  margin: 5px 0;
+  margin: 10px 0;
   grid-template-columns: 1fr 4fr;
   grid-column-gap: 5px;
   grid-template-areas: "profile content";
   position: relative;
+  min-height: 350px;
+  box-shadow: 0 0 1px #ddd, 0 0 1px 1px #ddd;
 }
 
 .user-thread .thread .thread-reply .profile {
@@ -11367,12 +11375,15 @@ a.text-dark:focus {
   border: 1px solid #EEE;
   border-radius: 3px;
   padding: 5px 10px;
-  display: grid;
+  display: -webkit-box;
+  display: flex;
   -webkit-box-pack: center;
           justify-content: center;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 20px 20px;
-  grid-row-gap: 10px;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
 }
 
 .user-thread .thread .thread-reply .profile .profile-username {
@@ -11380,6 +11391,8 @@ a.text-dark:focus {
 }
 
 .user-thread .thread .thread-reply .profile .profile-img {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   padding: 10px;
 }
@@ -11404,7 +11417,7 @@ a.text-dark:focus {
   border: 1px solid #EEE;
   border-radius: 3px;
   padding: 5px 10px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .user-login .form {

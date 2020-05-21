@@ -43,7 +43,7 @@ $borderColor: #EEE;
         .title {
           padding: 10px;
           margin: 5px 10px;
-          font-size:22px;
+          font-size:17px;
           font-weight:600;
           a {
             color:$hover;
@@ -56,7 +56,7 @@ $borderColor: #EEE;
         .description {
           padding: 10px;
           margin:5px 10px;
-          font-size:17px;
+          font-size:13px;
         }
       }
       .forum-info {
@@ -65,7 +65,7 @@ $borderColor: #EEE;
         justify-content: flex-start;
         align-items: center;
         grid-auto-rows: 50%;
-        font-size: 17px;
+        font-size: 14px;
       }
       .latest-thread {
         display:grid;
@@ -85,7 +85,7 @@ $borderColor: #EEE;
           justify-content: flex-start;
           align-items: center;
           grid-auto-rows: 50%;
-          font-size: 17px;
+          font-size: 14px;
         }
       }
     }
@@ -122,7 +122,7 @@ $borderColor: #EEE;
         align-items: center;
         .title {
           padding: 0 10px;
-          font-size:22px;
+          font-size:18px;
           font-weight:600;
           a {
             color:$hover;
@@ -139,7 +139,7 @@ $borderColor: #EEE;
         justify-content: flex-start;
         align-items: center;
         grid-auto-rows: 50%;
-        font-size: 17px;
+        font-size: 14px;
       }
       .latest-reply {
         display:grid;
@@ -159,7 +159,7 @@ $borderColor: #EEE;
           justify-content: flex-start;
           align-items: center;
           grid-auto-rows: 50%;
-          font-size: 17px;
+          font-size: 14px;
         }
       }
     }
@@ -182,26 +182,28 @@ $borderColor: #EEE;
     }
     .thread-post {
       display:grid;
-      margin:5px 0;
+      margin:10px 0;
       grid-column-gap: 5px;
       grid-template-columns: 1fr 4fr;
       grid-template-areas : 'profile content';
+      min-height: 400px;
       .profile {
         grid-area:profile;
         background-color:$primaryColor;
         border: 1px solid $borderColor;
         border-radius: 3px;
         padding:5px 10px;
-        display:grid;
+        display:flex;
         justify-content: center;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 20px 20px;
-        grid-row-gap: 10px;
+        align-items: center;
+        flex-direction: column;
         .profile-username {
           color : $hover;
-          font-size:18px;
+          font-size:16px;
         }
         .profile-img{
+          width:150px;
+          height:150px;
           border-radius: 50%;
           padding:10px;
         }
@@ -223,31 +225,34 @@ $borderColor: #EEE;
         border-radius: 3px;
         padding:5px 10px;
         position:relative;
-        font-size:18px;
+        font-size:16px;
       }
     }
     .thread-reply {
       display:grid;
-      margin:5px 0;
+      margin:10px 0;
       grid-template-columns: 1fr 4fr;
       grid-column-gap: 5px;
       grid-template-areas : 'profile content';
       position:relative;
+      min-height: 350px;
+      box-shadow: 0 0 1px #ddd, 0 0 1px 1px #ddd;
       .profile {
         grid-area:profile;
         background-color:$primaryColor;
         border: 1px solid $borderColor;
         border-radius: 3px;
         padding:5px 10px;
-        display:grid;
+        display:flex;
         justify-content: center;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 20px 20px;
-        grid-row-gap: 10px;
+        align-items: center;
+        flex-direction: column;
         .profile-username {
           font-size:18px;
         }
         .profile-img{
+          width:150px;
+          height:150px;
           border-radius: 50%;
           padding:10px;
         }
@@ -268,7 +273,7 @@ $borderColor: #EEE;
         border: 1px solid $borderColor;
         border-radius: 3px;
         padding:5px 10px;
-        font-size:18px;
+        font-size:16px;
       }
     }
   }
