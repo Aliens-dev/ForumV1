@@ -17,7 +17,6 @@ class HomeController extends Controller
 
     public function index () {
         $forums = Forum::with('threads')->get();
-        dd($forums);
         return view('home',compact('forums'));
     }
 
