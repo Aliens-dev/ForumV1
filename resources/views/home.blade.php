@@ -20,7 +20,11 @@
                     </a>
                 @endcan
                 <div class="list">
-                    debug
+                    @if(isset($forums) && count($forums) > 0)
+                        @foreach($forums as $forum)
+                                !
+                            @endforeach
+                        @endif
                 </div>
             </div>
         </div>
