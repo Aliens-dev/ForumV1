@@ -22,7 +22,31 @@
                 <div class="list">
                     @if(isset($forums) && count($forums) > 0)
                         @foreach($forums as $forum)
-                                !
+                            <div class="item">
+                                <div class="forum-name">
+                                <span class="title">
+                                    <i class="fa fa-edit"></i>
+                                    <a href="{{route('forum.index',$forum->id)}}">{{$forum->name}}</a>
+                                </span>
+                                    <span class="description">
+                                    {{$forum->description}}
+                                </span>
+                                </div>
+                                <div class="forum-info">
+                                    <span class="threads">{{$forum->threads->count()}} Threads</span>
+                                    <span class="replies">{{$forum->replies->count()}}  replies</span>
+                                </div>
+                                <div class="latest-thread">
+                                <span class="profile">
+                                    <img src="http://unsplash.it/200/200">
+                                </span>
+                                    <div class="thread-name">
+                                        <span class="title">{{$forum->threads->sortBy('created_at')->first()['title']}}</span>
+                                        <span class="post-time">{{ \Carbon\Carbon::parse($forum->threads->sortBy('created_at')->first()['created_at'])->toDateTimeString() }}</span>
+                                    </div>
+                                </div>
+
+                            </div>
                             @endforeach
                         @endif
                 </div>
