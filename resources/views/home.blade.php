@@ -22,6 +22,9 @@
                 <div class="list">
                     @if(isset($forums) && count($forums) > 0)
                         @foreach($forums as $forum)
+                            <?php
+                                dd($forum);
+                            ?>
                             <div class="item">
                                 <div class="forum-name">
                                 <span class="title">
@@ -45,7 +48,16 @@
                                         <span class="post-time">{{ \Carbon\Carbon::parse($forum->threads->sortBy('created_at')->first()['created_at'])->toDateTimeString() }}</span>
                                     </div>
                                 </div>
-
+                                @can('delete',$forum)
+                                    <div class="dropdown deletebtn">
+                                        <a class="btn dropdown-toggle" href="#" role="button" id="{{$forum->id}}"
+                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> </a>
+                                        <div class="dropdown-menu" aria-labelledby="{{$forum->id}}">
+                                            <a class="dropdown-item" href="{{route('forum.edit',$forum->id)}}">Edit</a>
+                                            <a class="dropdown-item" href="{{ route('forum.delete',$forum->id) }}">Delete</a>
+                                        </div>
+                                    </div>
+                                @endcan
                             </div>
                             @endforeach
                         @endif
