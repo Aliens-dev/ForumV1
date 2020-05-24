@@ -22,9 +22,6 @@
                 <div class="list">
                     @if(isset($forums) && count($forums) > 0)
                         @foreach($forums as $forum)
-                            <?php
-                                dd($forum);
-                            ?>
                             <div class="item">
                                 <div class="forum-name">
                                 <span class="title">
