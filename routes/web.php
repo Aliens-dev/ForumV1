@@ -12,10 +12,6 @@
 */
 
 
-Route::get('pop',function(){
-    event(new \App\Events\OrderMade('helo world'));
-});
-
 Route::get('/', 'HomeController@index')->name('home.index');
 Route::get('/login', 'HomeController@login')->name('user.login.get');
 Route::post('/login','HomeController@loginPost')->name('user.login.post');
@@ -26,6 +22,7 @@ Route::get('/profile','HomeController@profile')->name('user.profile');
 
 Route::get('search','ForumController@search')->name('search');
 Route::post('search','ForumController@searchPost')->name('search.post');
+
 Route::get('/forum/add','ForumController@add')->name('forum.add');
 Route::post('/forum/add','ForumController@store')->name('forum.store');
 
@@ -33,6 +30,7 @@ Route::get('/forum/{id}','ForumController@index')->name('forum.index');
 Route::get('/forum/{id}/edit','ForumController@edit')->name('forum.edit');
 Route::post('/forum/{id}/edit','ForumController@update')->name('forum.update');
 Route::any('/forum/{id}/delete','ForumController@delete')->name('forum.delete');
+
 Route::get('/forum/{id}/add','ThreadController@add')->name('thread.add');
 Route::post('/forum/{id}/add','ThreadController@store')->name('thread.store');
 

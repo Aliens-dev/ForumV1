@@ -20,7 +20,7 @@
                     <li class="nav-item">
                         <a class="nav-link btn btn-outline-success" href="#">Sign up</a>
                     </li>
-                    @endguest
+                @endguest
                 @auth
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="profile" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
