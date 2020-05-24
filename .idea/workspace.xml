@@ -46,8 +46,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+            <state relative-caret-position="216">
+              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+              <folding>
+                <element signature="e#474#481#1#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -382,12 +385,12 @@
       <workItem from="1590161255620" duration="588000" />
       <workItem from="1590192846924" duration="5399000" />
       <workItem from="1590261280099" duration="76000" />
-      <workItem from="1590326091252" duration="737000" />
+      <workItem from="1590326091252" duration="845000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16441000" />
+    <option name="totallyTimeSpent" value="16549000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -481,8 +484,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+        <state relative-caret-position="216">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding>
+            <element signature="e#474#481#1#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
