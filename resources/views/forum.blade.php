@@ -35,7 +35,11 @@
                                 <img src="http://unsplash.it/200/200">
                             </span>
                             <div class="posted-time">
-                                <span class="post-time">{{ \Carbon\Carbon::parse($thread->replies->sortBy('created_at')->first()['created_at'])->toDateTimeString() }}</span>
+                                @if($thread->replies->sortBy('created_at')->first())
+                                    <span class="post-time">{{ \Carbon\Carbon::parse($thread->replies->sortBy('created_at')->first()['created_at'])->toDateTimeString() }}</span>
+                                @else
+                                    <span class="post-time">No Messages</span>
+                                @endif
                             </div>
 
                             @can('delete',$thread)
