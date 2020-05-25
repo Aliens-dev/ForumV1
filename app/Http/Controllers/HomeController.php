@@ -16,7 +16,10 @@ class HomeController extends Controller
     }
 
     public function index () {
-        $forums = Forum::with('threads')->get();
+        $forums = Forum::all();
+        foreach($forums as $forum) {
+            $forum->threads = Forum::find($forum->id)->threads;
+        }
         return view('home',compact('forums'));
     }
 
