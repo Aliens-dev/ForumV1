@@ -32,29 +32,7 @@
                                     {{$forum->description}}
                                 </span>
                                 </div>
-                                <div class="forum-info">
-                                    <span class="threads">{{$forum->threads->count()}} Threads</span>
-                                    <span class="replies">{{$forum->replies->count()}}  replies</span>
-                                </div>
-                                <div class="latest-thread">
-                                <span class="profile">
-                                    <img src="http://unsplash.it/200/200">
-                                </span>
-                                    <div class="thread-name">
-                                        <span class="title">{{$forum->threads->sortBy('created_at')->first()['title']}}</span>
-                                        <span class="post-time">{{ \Carbon\Carbon::parse($forum->threads->sortBy('created_at')->first()['created_at'])->toDateTimeString() }}</span>
-                                    </div>
-                                </div>
-                                @can('delete',$forum)
-                                    <div class="dropdown deletebtn">
-                                        <a class="btn dropdown-toggle" href="#" role="button" id="{{$forum->id}}"
-                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> </a>
-                                        <div class="dropdown-menu" aria-labelledby="{{$forum->id}}">
-                                            <a class="dropdown-item" href="{{route('forum.edit',$forum->id)}}">Edit</a>
-                                            <a class="dropdown-item" href="{{ route('forum.delete',$forum->id) }}">Delete</a>
-                                        </div>
-                                    </div>
-                                @endcan
+
                             </div>
                             @endforeach
                         @endif
